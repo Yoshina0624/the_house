@@ -21,17 +21,16 @@ body {
 }
 /* ---------- layout ---------- */
 
-
 /* ---------- utility ---------- */
 @media screen and (min-width: 768px) {
-    .u_dp-n {
-        display: none;
-    }
+  .u_dp-n {
+    display: none;
+  }
 }
-
 
 /* ---------- module ---------- */
 
+/* front-page */
 .top_kv-img-wrap {
   height: 100vh;
   background: url("../img/top/top_kv.jpg") top center / cover;
@@ -243,7 +242,11 @@ body {
 .top_works {
   background: var(--gray-color2);
   padding-top: 61px;
-  padding-bottom: 97px;
+}
+@media screen and (min-width: 768px) {
+  .top_works {
+    padding-bottom: 97px;
+  }
 }
 .m_top-tit {
   text-align: center;
@@ -326,8 +329,21 @@ body {
   }
 }
 /* トップページーフロー */
-.top_flow__sp-container {
+
+.top_flow__sp-container__sp {
   padding: 40px 0 49px;
+}
+
+.top_flow-container__pc__flow {
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .top_flow__sp-container__sp {
+    display: none;
+  }
+  .top_flow-container__pc__flow {
+    display: block;
+  }
 }
 .top_flow-btn {
   width: 294px;
@@ -371,7 +387,198 @@ body {
   margin-top: -6px;
   transform: translateX(-50%) rotate(45deg);
 }
+/* トップページ-フロー__pc */
+.top_flow__sp-container__pc {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/top/top_sauna.jpg) top center / cover;
+}
 
+@media screen and (min-width: 768px) {
+  .top_flow__sp-container__pc {
+    background: url(../img/top/top_flow.jpg) top / cover;
+  }
+}
+.top_cta {
+  padding: 225px 0 74px;
+}
+.top_cta-text {
+  font-size: 26px;
+  line-height: 1.92;
+  text-align: left;
+  color: var(--white-color);
+  width: 244px;
+  margin: 0 auto;
+}
+.top_flow-sauna_btn {
+  background: transparent;
+  margin-top: 156px;
+}
+.top_flow-sauna_btn__link {
+  font-family: "GFS Didot", serif;
+  padding: 10px 78px;
+  color: var(--white-color);
+  border: 3px solid var(--white-color);
+}
+@media screen and (min-width: 768px) {
+  .top_cta {
+    padding: 257px 0 118px;
+  }
+  .top_cta-text {
+    font-size: 40px;
+    line-height: 1.75;
+    text-align: center;
+    width: unset;
+  }
+  .top_flow-sauna_btn {
+    margin: 126px auto 0;
+  }
+  .top_flow-sauna_btn__link {
+    font-size: 34px;
+    padding: 14px 60px;
+  }
+}
+
+.top_flow-container__pc__flow {
+  padding: 126px 0 99px;
+}
+.top_flow-container__pc__flow-txt-box {
+  width: 99%;
+  margin: 104px auto 0;
+  writing-mode: vertical-rl;
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+.top_flow-container__pc__flow-txt-wrap {
+  display: flex;
+}
+@media screen and (min-width: 1080px) {
+  .top_flow-container__pc__flow-txt-box {
+    margin-top: 154px;
+  }
+}
+.top_flow-container__pc__flow-txt_num {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  writing-mode: horizontal-tb;
+  position: relative;
+}
+.top_flow-container__pc__flow-txt_num::after {
+  content: "";
+  width: 2px;
+  height: 33px;
+  background: var(--black-color2);
+  transform: translateX(-50%) rotate(90deg);
+  position: absolute;
+  bottom: -10px;
+  left: 39.5%;
+}
+.top_flow-container__pc__flow-txt {
+  font-size: 16px;
+}
+.top_flow-container__pc-img__wrap {
+  margin: 154px auto 0;
+  width: 1198px;
+  height: 384px;
+}
+
+/* トップページーイベント */
+.top_event {
+  background: var(--black-color2);
+}
+.top_event__container {
+  padding: 54px 0;
+}
+@media screen and (min-width: 768px) {
+  .top_event__container {
+    padding: 56px 0 38px;
+  }
+}
+.top_event-tit {
+  color: var(--white-color);
+}
+.top_event-item__wrapper {
+  width: 79.6%;
+  margin: 54px auto 0;
+  color: var(--white-color);
+}
+@media screen and (min-width: 1080px) {
+  .top_event-item__wrapper {
+    display: flex;
+    gap: 110px;
+  }
+  .top_event-item {
+    width: calc((100% - 220px) / 3);
+  }
+}
+.top_event-item__cat {
+  font-size: 14px;
+  padding: 6px 28px;
+  display: inline;
+  border: 1px solid var(--white-color);
+}
+.top_event-item__news {
+  margin-top: 12px;
+  font-size: 19px;
+  line-height: 1.947;
+}
+.top_event-item__prefa {
+  line-height: 1.615;
+  font-size: 13px;
+}
+.top_event-item__date {
+  line-height: 1.923;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.top_event-item__img-wrap {
+  margin-top: 12px;
+}
+.top_event-item:not(:first-child) {
+  margin-top: 54px;
+}
+@media screen and (min-width: 1080px) {
+  .top_event-item:not(:first-child) {
+    margin-top: 0;
+  }
+}
+.top_event-btn {
+  width: 100%;
+  margin: 59px auto 0;
+}
+@media screen and (min-width: 1080px) {
+  .top_event-btn {
+    display: none;
+  }
+}
+.top_event-btn__link {
+  color: var(--black-color2);
+  background: var(--white-color);
+  padding: 10px 105px;
+}
+.top_event-btn__pc {
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .top_event-btn__pc {
+    display: block;
+    margin: 45px auto 0;
+  }
+  .top_event-btn__link__pc {
+    font-size: 24px;
+    color: var(--white-color);
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  .top_event-btn__link__pc::before {
+    border-color: var(--white-color);
+  }
+  .top_event-btn__link__pc::after {
+    border-color: transparent transparent transparent var(--white-color);
+  }
+}
 
 /* ---------- sauna-page ---------- */
 .m_sauna_kv-wrap {
@@ -386,8 +593,8 @@ body {
 
 @media screen and (min-width: 1080px) {
   .sauna_kv-txt-wrapper {
-      top: 50%;
-      margin-left: 13%;
+    top: 50%;
+    margin-left: 13%;
   }
 }
 
@@ -399,8 +606,8 @@ body {
 }
 
 @media screen and (min-width: 1080px) {
-  .sauna_kv-img__sp{
-      display: none;
+  .sauna_kv-img__sp {
+    display: none;
   }
 }
 
@@ -414,7 +621,7 @@ body {
 
 @media screen and (min-width: 1080px) {
   .sauna_kv-img__pc {
-      display: block;
+    display: block;
   }
 }
 
@@ -425,11 +632,12 @@ body {
 
 @media screen and (min-width: 768px) {
   .sauna_kv-heading {
-      font-size: 32px;
+    font-size: 32px;
   }
 }
 
-.sauna_kv-txt_upper, .sauna_kv-txt_lowwer {
+.sauna_kv-txt_upper,
+.sauna_kv-txt_lowwer {
   font-size: 12px;
   line-height: 1.66;
   letter-spacing: 0.2em;
@@ -437,8 +645,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .sauna_kv-txt_upper, .sauna_kv-txt_lowwer {
-      font-size: 16px;
+  .sauna_kv-txt_upper,
+  .sauna_kv-txt_lowwer {
+    font-size: 16px;
   }
 }
 
@@ -462,8 +671,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .sauna-plan_ttl {
-      font-size: 33px;
-      padding-top: 102px;
+    font-size: 33px;
+    padding-top: 102px;
   }
 }
 
@@ -475,14 +684,14 @@ body {
 
 @media screen and (min-width: 768px) {
   .sauna-plan_txt {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .sauna-plan_contents_container {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -499,9 +708,9 @@ body {
 
 @media screen and (min-width: 768px) {
   .sauna-plan_contents {
-      width: 368px;
-      padding-top: 30px;
-      margin: 38px 0 0 0;
+    width: 368px;
+    padding-top: 30px;
+    margin: 38px 0 0 0;
   }
 }
 
@@ -519,9 +728,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-.sauna-plan_content_ttl {
-  font-size: 34px;
-}
+  .sauna-plan_content_ttl {
+    font-size: 34px;
+  }
 }
 
 .sauna-plan_content_txt {
@@ -533,7 +742,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .sauna-plan_content_txt {
-      font-size: 20px;
+    font-size: 20px;
   }
 }
 
@@ -545,10 +754,10 @@ body {
 
 @media screen and (min-width: 768px) {
   .sauna-plan_box {
-      padding-top: 52px;
-      padding-bottom: 102px;
+    padding-top: 52px;
+    padding-bottom: 102px;
   }
-}  
+}
 
 .sauna-plan_img__sp {
   width: 345px;
@@ -557,8 +766,8 @@ body {
 }
 
 @media screen and (min-width: 1080px) {
-  .sauna-plan_img__sp{
-      display: none;
+  .sauna-plan_img__sp {
+    display: none;
   }
 }
 
@@ -571,7 +780,7 @@ body {
 
 @media screen and (min-width: 1080px) {
   .sauna-plan_img__pc {
-      display: block;
+    display: block;
   }
 }
 
@@ -603,8 +812,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  opacity: .5;
-
+  opacity: 0.5;
 }
 
 .sauna-custom_heading {
@@ -617,7 +825,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .sauna-custom_heading  {
+  .sauna-custom_heading {
     font-size: 40px;
   }
 }
@@ -633,14 +841,16 @@ body {
   }
 }
 
-.sauna-custom_txt_upper, .sauna-custom_txt_lower {
+.sauna-custom_txt_upper,
+.sauna-custom_txt_lower {
   line-height: 1.67;
   font-size: 12px;
   color: var(--white-color);
 }
 
 @media screen and (min-width: 768px) {
-  .sauna-custom_txt_upper, .sauna-custom_txt_lower {
+  .sauna-custom_txt_upper,
+  .sauna-custom_txt_lower {
     font-size: 26px;
   }
 }
@@ -835,12 +1045,12 @@ body {
   font-size: 24px;
   letter-spacing: 0.1em;
   line-height: 0.83;
-  color: #ACACAC;
+  color: #acacac;
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  font-family: 'GFS Didot', serif;
+  font-family: "GFS Didot", serif;
   font-style: italic;
 }
 .sauna-contact_flow_item:nth-of-type(2):before {
@@ -848,18 +1058,18 @@ body {
   font-size: 24px;
   letter-spacing: 0.1em;
   line-height: 0.83;
-  color: #ACACAC;
+  color: #acacac;
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  font-family: 'GFS Didot', serif;
+  font-family: "GFS Didot", serif;
   font-style: italic;
 }
 
 .sauna-contact_flow_item:nth-of-type(2)::after {
   content: "";
-  border: 1px solid #3B3B3B;
+  border: 1px solid #3b3b3b;
   width: 2px;
   height: 23px;
   position: absolute;
@@ -878,17 +1088,18 @@ body {
   font-size: 24px;
   letter-spacing: 0.1em;
   line-height: 0.83;
-  color: #ACACAC;
+  color: #acacac;
   position: absolute;
   top: 50%;
   left: 10px;
-  transform: translateY(-50%);    font-family: 'GFS Didot', serif;
+  transform: translateY(-50%);
+  font-family: "GFS Didot", serif;
   font-style: italic;
 }
 
 .sauna-contact_flow_item:nth-of-type(3)::after {
   content: "";
-  border: 1px solid #3B3B3B;
+  border: 1px solid #3b3b3b;
   width: 2px;
   height: 23px;
   position: absolute;
@@ -907,17 +1118,18 @@ body {
   font-size: 24px;
   letter-spacing: 0.1em;
   line-height: 0.83;
-  color: #ACACAC;
+  color: #acacac;
   position: absolute;
   top: 50%;
   left: 10px;
-  transform: translateY(-50%);    font-family: 'GFS Didot', serif;
+  transform: translateY(-50%);
+  font-family: "GFS Didot", serif;
   font-style: italic;
 }
 
 .sauna-contact_flow_item:nth-of-type(4)::after {
   content: "";
-  border: 1px solid #3B3B3B;
+  border: 1px solid #3b3b3b;
   width: 2px;
   height: 23px;
   position: absolute;
@@ -936,18 +1148,18 @@ body {
   font-size: 24px;
   letter-spacing: 0.1em;
   line-height: 0.83;
-  color: #ACACAC;
+  color: #acacac;
   position: absolute;
   top: 50%;
   left: 10px;
-  transform: translateY(-50%);    
-  font-family: 'GFS Didot', serif;
+  transform: translateY(-50%);
+  font-family: "GFS Didot", serif;
   font-style: italic;
 }
 
 .sauna-contact_flow_item:nth-of-type(5)::after {
   content: "";
-  border: 1px solid #3B3B3B;
+  border: 1px solid #3b3b3b;
   width: 2px;
   height: 22px;
   position: absolute;
@@ -1053,19 +1265,19 @@ body {
   transform: translateY(-50%);
 }
 
-.sauna-arrow{
+.sauna-arrow {
   width: 14px;
   height: 15px;
-  border-top: 5px solid #ACACAC;
-  border-right: 5px solid #ACACAC;
+  border-top: 5px solid #acacac;
+  border-right: 5px solid #acacac;
   transform: rotate(-45deg);
   margin: 0 auto;
 }
 
 .sauna-arrow_top {
   font-size: 24px;
-  font-family: 'GFS Didot', serif;
-  color: #ACACAC;
+  font-family: "GFS Didot", serif;
+  color: #acacac;
   text-align: center;
   margin-top: 11px;
   line-height: 0.8;
@@ -1079,21 +1291,21 @@ body {
   background: url("../img/works/works_1.jpg") top center / cover;
 }
 
-.construction-detail_container{
+.construction-detail_container {
   margin: 33px 26px 44px 26px;
 }
 
-.construction-detail-tit{
+.construction-detail-tit {
   font-size: 16px;
   font-family: "GFS Didot", serif;
 }
 
-.construction-detail-sub-tit{
+.construction-detail-sub-tit {
   margin-top: 10px;
   font-size: 12px;
 }
 
-.construction-detail-table{
+.construction-detail-table {
   margin-top: 36px;
   padding-left: 18.6px;
   font-size: 8px;
@@ -1101,96 +1313,95 @@ body {
   border-collapse: collapse;
 }
 
-.construction-detail-table-row1{
+.construction-detail-table-row1 {
   padding-top: 8.2px;
   padding-bottom: 8.4px;
   /* width: 82px; */
-   width: 30%;
+  width: 30%;
   text-align: center;
   /* vertical-align: middle; */
 }
 
-.construction-detail-table-tr{
-  border-top: 1.0px solid #707070;
+.construction-detail-table-tr {
+  border-top: 1px solid #707070;
 }
 
-.construction-detail-consept-tit{
+.construction-detail-consept-tit {
   margin-top: 36.7px;
   font-size: 20px;
 }
 
-.construction-detail-consept-txt{
-  margin-top: 12px; 
+.construction-detail-consept-txt {
+  margin-top: 12px;
   font-size: 7px;
 }
 
-.construction-detail-point-tit{
-  margin-top: 19px; 
+.construction-detail-point-tit {
+  margin-top: 19px;
   font-size: 20px;
 }
 
-.construction-detail-point-txt{
-  margin-top: 12px;  
+.construction-detail-point-txt {
+  margin-top: 12px;
   font-size: 7px;
 }
 
-.construction-detail_img_wrap:not(:first-child){
+.construction-detail_img_wrap:not(:first-child) {
   margin-top: 6px;
 }
 
-.construction-detail_img-detail-container{
+.construction-detail_img-detail-container {
   display: none;
 }
 
 @media screen and (min-width: 1080px) {
-  .construction-detail{
+  .construction-detail {
     display: flex;
     flex-flow: column-reverse;
   }
 
-  .construction-detail_img-container{
+  .construction-detail_img-container {
     display: flex;
     justify-content: space-around;
     margin: 0px 361px;
   }
 
-  .construction-detail_img_wrap:not(:first-child){
+  .construction-detail_img_wrap:not(:first-child) {
     margin-top: 186px;
-    
   }
-  .construction-detail_img_wrap{
+  .construction-detail_img_wrap {
     margin-top: 186px;
   }
 
-  .construction-detail_img_wrap{
+  .construction-detail_img_wrap {
     width: 16%;
   }
 
-  .construction-detail-tit{
+  .construction-detail-tit {
     margin-top: 64px;
     font-size: 40px;
     font-family: "GFS Didot", serif;
     text-align: center;
   }
-  
-  .construction-detail-sub-tit{
+
+  .construction-detail-sub-tit {
     margin-top: 5px;
     font-size: 24px;
     text-align: center;
   }
 
-  .construction-detail_container_wrapper_sp{
+  .construction-detail_container_wrapper_sp {
     display: flex;
     margin-top: 83px;
   }
 
-  .construction-detail_container_sp{
+  .construction-detail_container_sp {
     /* margin: 0px 960px 44px 361px; */
     display: flex;
     flex-flow: column;
     width: 29%;
     margin: 0% 4% 0% 19%;
-	  /* flex-wrap: wrap; --折り返しの指定-- */
+    /* flex-wrap: wrap; --折り返しの指定-- */
   }
 
   .construction-detail_flex-item-1 {
@@ -1203,27 +1414,27 @@ body {
     order: 3;
   }
 
-  .construction-detail-consept-tit{
+  .construction-detail-consept-tit {
     margin-top: 0px;
     font-size: 20px;
   }
-  
-  .construction-detail-consept-txt{
-    margin-top: 24px; 
-    font-size: 7px;
-  }
-  
-  .construction-detail-point-tit{
-    margin-top: 129px; 
-    font-size: 20px;
-  }
-  
-  .construction-detail-point-txt{
-    margin-top: 24px;  
+
+  .construction-detail-consept-txt {
+    margin-top: 24px;
     font-size: 7px;
   }
 
-  .construction-detail-table{
+  .construction-detail-point-tit {
+    margin-top: 129px;
+    font-size: 20px;
+  }
+
+  .construction-detail-point-txt {
+    margin-top: 24px;
+    font-size: 7px;
+  }
+
+  .construction-detail-table {
     margin-top: 123px;
     padding-left: 18.6px;
     font-size: 8px;
@@ -1231,7 +1442,7 @@ body {
     border-collapse: collapse;
   }
 
-  .construction-detail_img-detail-container{
+  .construction-detail_img-detail-container {
     display: block;
   }
 }
