@@ -2779,7 +2779,254 @@ body {
   transform: translateY(-50%) rotate(45deg);
 }
 
+/* ---------- flow ---------- */
+.flow_container {
+  margin-top: 29px;
+  margin-bottom: 43px;
+}
 
+@media screen and (min-width: 1080px) {
+  .flow_container {
+    margin-top: 0;
+  }
+
+  .flow_kv {
+    position: relative;
+  }
+
+  .flow_ttl_large {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+
+}
+
+.flow_ttl {
+  width: 89%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1080px) {
+  .flow_ttl {
+    z-index: var(--z-index-header);
+  }
+}
+
+.flow_ttl_large {
+  font-size: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .flow_ttl_large {
+    font-size: 62px;
+    color: #fff;
+  }
+}
+
+.flow_ttl_small {
+  font-size: 16px;
+}
+
+.flow_kv-box {
+  width: 89%;
+  margin: 34px auto 0;
+}
+
+@media screen and (min-width: 1080px) {
+  .flow_kv-box {
+    width: 100%;
+    margin-top: 0;
+  }
+  .flow_kv-img_pc {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .flow_request_inner {
+    text-align: center;
+    padding-top: 263px;
+  }
+  
+  .flow_request_ttl-large {
+    font-size: 40px;
+    line-height: 1.32;
+  }
+  
+  .flow_request_ttl-small {
+    font-size: 20px;
+    line-height: 1.93;
+    padding-bottom: 76px;
+  }
+
+  .flow_request_img-box {
+    width: 62%;
+    margin: 0 auto;
+  }
+
+  .flow_request_arrow-wrap {
+    text-align: center;
+    margin-top: 95px;
+  }
+
+  .flow_request_arrow {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid black;
+    margin-top: 50px;
+  }
+
+  .flow_section {
+    width: 63%;
+    margin: 0 auto;
+  }
+
+  .flow_contents_free, .flow_contents_paid {
+    display: flex;
+  }
+
+  .flow_contents_free {
+    align-items: end;
+  }
+
+  @media screen and (min-width: 768px) {
+    .flow_contents_paid {
+      margin-top: 63px;
+    }
+  }
+
+  .flow_contents_free-inner, .flow_contents_paid-inner {
+    margin-left: 35px;
+  }
+
+  .flow_contents_free-txt {
+    width: 46px;
+    background-color: #E2E2E2;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 1343px 10px 23px 10px;
+  }
+  .flow_contents_paid-txt {
+    width: 46px;
+    color: var(--white-color);
+    background-color: #333;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 19px 10px 89% 10px;
+  }
+
+  .flow_content-inner {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flow_contents_paid {
+    border-top: 1px solid #B9B9B9;
+  }
+}
+
+.flow_number {
+  font-size: 41px;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+  .flow_number {
+    font-size: 57px;
+    padding-left: 30px;
+  }
+}
+
+.flow_contents {
+  width: 89%;
+  margin: 0 auto;
+}
+
+.flow_content:not(:first-child) {
+  border-top: 1px solid #B9B9B9;
+}
+
+.flow_content {
+  margin-bottom: 18.5px;
+  margin-top: 13.5px;
+}
+
+.flow_content_ttl {
+  font-size: 20px;
+  line-height: 0.45;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .flow_content_ttl {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 33px;
+  }
+}
+
+.flow_content_txt {
+  font-size: 12px;
+  line-height: 1.75;
+  margin-top: 14px;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 768px) {
+  .flow_content_txt {
+    font-size: 18px;
+    padding-left: 30px;
+    line-height: 1.94;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flow-btn-wrap {
+    position: relative;
+  }
+  .flow-btn__pc {
+    position: absolute;
+    left: 50%;
+    top: 162px;
+    transform: translate(-50%, 50%);
+  }
+  
+  .flow-btn__link__pc {
+    font-size: 20px;
+    color: #000;
+    display: flex;
+    position: relative;
+  }
+  .flow-btn__link__pc:before {
+    content: "";
+    width: 89px;
+    border-top: 1px solid var(--black-color2);
+    top: 62px;
+    left: 110px;
+    position: absolute;
+    padding-bottom: 84px;
+  }
+  .flow-btn__link__pc::after {
+    content: "";
+    width: 10px;
+    height: 8px;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent var(--black-color2);
+    position: absolute;
+    top: 57px;
+    left: 192px;
+    transform: translateX(-50%) rotate(135deg);
+  }
+}
 
 
 
