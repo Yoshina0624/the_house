@@ -2546,7 +2546,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .company_table_tr {
-    border-top: 1px solid #CBCBCB;
+    border-top: none;
   }
 }
 
@@ -2562,9 +2562,9 @@ body {
   padding-top: 23px;
 }
 
-/* .company_table_th:not(:first-child) {
+.company_table_th:not(:first-child) {
   border-top: 1px solid #707070;
-} */
+}
 
 .company_table_td {
   font-size: 13px;
@@ -2572,6 +2572,8 @@ body {
   display: block;
   padding-bottom: 23px;
 }
+
+
 
 @media screen and (min-width: 768px) {
   .company_table_th {
@@ -2585,6 +2587,10 @@ body {
     letter-spacing: 0;
   }
 
+  .company_table_th:not(:first-child) {
+    border-top: 1px solid #707070;
+  }
+  
   .company_table_td {
     display: table-cell;
     padding-bottom: 0;
@@ -2592,15 +2598,15 @@ body {
     font-size: 15px;
     letter-spacing: 0;
   }
-
-  .company_table_th:not(:first-child) {
-    border-top: 1px solid red;
+  .company_table_td:not(:first-child) {
+    border-top: 1px solid #CBCBCB;
   }
-  /* .company_table_tr:first-child .company_table_td:not(:first-child) {
-    border-top: none;
-  } */
-}
 
+  .company_table_tr:first-child .company_table_td:not(:first-child) {
+    border-top: none;
+  }
+}
+/* company_map */
 @media screen and (min-width: 768px) {
   .company_map_container {
     padding-bottom: 137px;
@@ -2640,28 +2646,41 @@ body {
     position: relative;
   }
 
+  .company_map_upper {
+    position: absolute;
+    top: 0;
+    position: relative;
+  }
+
+  
   .company_map_upper_left {
     position: absolute;
     left: 0;
-    top: 0;
   }
-
+  
   .company_map_upper_right {
     position: absolute;
     right: 0;
-    top: 0;
+    background-color: #F4F2F1;
+  }
+
+  .company_map_lower {
+    position: absolute;
+    bottom: 0;
+    position: relative;
   }
 
   .company_map_lower_left {
     position: absolute;
     left: 0;
-    bottom: 0;
+
+    background-color: #F4F2F1;
   }
 
   .company_map_lower_right {
     position: absolute;
     right: 0;
-    bottom: 0;
+
   }
 }
 
