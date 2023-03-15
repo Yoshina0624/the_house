@@ -2486,15 +2486,20 @@ body {
   .company_table_th {
     display: table-cell;
     text-align: center;
-    width: 10%;
     padding-top: 23px;
     padding-bottom: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 15px;
+    letter-spacing: 0;
   }
 
   .company_table_td {
     display: table-cell;
     padding-bottom: 0;
     padding-left: 35px;
+    font-size: 15px;
+    letter-spacing: 0;
   }
 
   .company_table_th:not(:first-child) {
@@ -2505,6 +2510,15 @@ body {
   } */
 }
 
+@media screen and (min-width: 768px) {
+  .company_map_container {
+    padding-bottom: 137px;
+  }
+}
+
+.company_map_ttl {
+  padding-top: 77px;
+}
 
 .company_map_wrap {
   width: 85%;
@@ -2515,12 +2529,84 @@ body {
   margin-top: 47px;
 }
 
-.company_map_inner {
+@media screen and (min-width: 768px) {
+  .company_map_wrap:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.company_map_wrapper {
+  display: flex;
+}
+
+
+@media screen and (min-width: 1080px) {
+  .company_map_01 {
+    position: relative;
+  } 
+  .map_left {
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+  }
+
+  .map_right {
+    position: absolute;
+    right: 0;
+    bottom: -50%;
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  .company_map_02 {
+    position: relative;
+    margin-top: 500px;
+  }
+  .map_left_02 {
+    position: absolute;
+    left: 0;
+    top: -200%;
+  }
+
+  .map_right_02 {
+    position: absolute;
+    right: 0;
+    top: -200%;
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  .company_map_wrapper:not(:first-child) {
+    margin-top: 66px;
+  }
+
+  
+  .company_map_wrap {
+    background-color: #F4F2F1;
+    width: 56%;
+    margin: 0;
+  }
+
+  .company_map_wrap-inner {
+    margin-left: 25%;
+    margin-top: 17%;
+  }
+}
+
+.company_map_logo-inner {
   display: flex;
 }
 
 .company_map-img {
   width: 47%;
+}
+
+@media screen and (min-width: 768px) {
+  .company_map-img {
+    width: 24%;
+  }
 }
 
 .company_map_store-name {
@@ -2531,8 +2617,20 @@ body {
   margin-left: 12px;
 }
 
+@media screen and (min-width: 768px) {
+  .company_map_store-name {
+    font-size: 34px;
+  }
+}
+
 .company_map-post, .company_map-address {
   font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .company_map-post, .company_map-address {
+    font-size: 16px;
+  }
 }
 
 .company_map-post {
@@ -2547,6 +2645,14 @@ body {
   border: 1px solid #707070;
   text-align: center;
   padding: 19px 0;
+  background-color: var(--white-color);
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .company_map_btn_wrap {
+    width: 43%;
+  }
 }
 
 .company_map-btn {
@@ -2554,6 +2660,33 @@ body {
   line-height: 1.9;
 }
 
+@media screen and (min-width: 768px) {
+  .company_map-btn:before {
+    content: "";
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+
+.company_map-btn:after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  position: absolute;
+  top: 50%;
+  right: 34px;
+  transform: translateY(-50%) rotate(45deg);
+}
 
 
 
