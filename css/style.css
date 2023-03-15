@@ -2626,44 +2626,42 @@ body {
   }
 }
 
-.company_map_wrapper {
+.company_map_inner {
   display: flex;
 }
 
-
-@media screen and (min-width: 1080px) {
-  .company_map_01 {
-    position: relative;
-  } 
-  .map_left {
-    position: absolute;
-    left: 0;
-    bottom: -50%;
-  }
-
-  .map_right {
-    position: absolute;
-    right: 0;
-    bottom: -50%;
+@media screen and (min-width: 768px) {
+  .company_map_wrapper {
+    display: flex;
   }
 }
-
-
-@media screen and (min-width: 1080px) {
-  .company_map_02 {
+@media screen and (min-width: 768px) {
+  .l_section_map {
     position: relative;
-    margin-top: 500px;
   }
-  .map_left_02 {
+
+  .company_map_upper_left {
     position: absolute;
     left: 0;
-    top: -200%;
+    top: 0;
   }
 
-  .map_right_02 {
+  .company_map_upper_right {
     position: absolute;
     right: 0;
-    top: -200%;
+    top: 0;
+  }
+
+  .company_map_lower_left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .company_map_lower_right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }
 
