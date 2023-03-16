@@ -3278,6 +3278,7 @@ transform: scale(0.9);
    .flow_contents_paid-inner{
     position: relative;
     padding-left: 14px;
+    width: 100%;
   }
 
     .flow_contents_paid-inner::before {
