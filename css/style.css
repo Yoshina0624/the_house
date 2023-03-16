@@ -30,10 +30,8 @@ body {
   color: var(--black-color2);
 }
 /* ---------- layout ---------- */
-/* header */
-
 .l_header {
-  height: 70px;
+  height:100px;
   width: 100%;
   padding: 0 16px;
   display: flex;
@@ -42,20 +40,31 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  position: fixed;
   z-index: var(--z-index-default);
-  background-color: var(--white-color);
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.63);
 }
+
 
 @media screen and (min-width: 768px) {
   .l_header {
     padding: 0 48px;
-    opacity: 0.63;
+    background-color: rgba(255, 255, 255, 0.63);
+    flex-shrink: 0;
+    gap: 30px;
   }
 }
 
 .l_header-logo {
-  width: 10%;
+  width: 100%;
+}
+
+.l_header-logo__hab {
+  width: 60%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .l_header-nav {
@@ -65,16 +74,15 @@ body {
   right: 0;
   bottom: 0;
   background: var(--white-color);
-  z-index: var(--z-index-header);
 }
 
 @media screen and (min-width: 768px) {
   .l_header-nav {
     position: static;
     background: transparent;
-    width: auto;
-    height: auto;
-    display: block;
+    /* width: auto;
+    height: auto; */
+    /* display: block; */
     opacity: 1;
     pointer-events: inherit;
   }
@@ -94,6 +102,8 @@ body {
     gap: 0 40px;
     position: static;
     transform: none;
+    align-items: center;
+    z-index: var(--z-index-menu);
   }
 }
 
@@ -101,6 +111,12 @@ body {
   font-size: 14px;
   margin-left: 16%;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .l_header-nav_item {
+    margin-left: 0;
+  }
 }
 
 .l_header-nav_item::before {
@@ -172,14 +188,15 @@ body {
   content: "会社情報"; /* テキストを直接指定 */
 }
 
-.l_header-nav_item:nth-child(6)::before {
+
+.l_header-nav_item:nth-child(7)::before {
   width: 5%;
   background-color: black;
 }
 
-.l_header-nav_item:nth-child(6)::after {
+.l_header-nav_item:nth-child(7)::after {
   color: black;
-  content: "プライバシーポリシー"; /* テキストを直接指定 */
+  content: "お問い合わせ"; /* テキストを直接指定 */
 }
 
 @media (min-width: 768px) {
@@ -192,31 +209,16 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .l_header-nav_item_image {
-    display: none;
-  }
-
-  .l_header-nav.is-open .l_header-nav_item_image {
-    display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: var(--z-index-header);
-  }
-
-  .l_header-nav.is-open .l_header-nav_item_image img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
 
 @media screen and (min-width: 768px) {
   .l_header-nav_item_contact {
-    background-color: white;
+    width: 282px;
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    opacity: 1;
     z-index: 2;
-    padding: 0px 64px;
   }
 }
 
@@ -237,15 +239,21 @@ body {
   }
 }
 
-.l_header-nav_link {
-  font-size: 28px;
+.l_header-nav_link{
+  font-size: 25px;
   font-family: "GFS Didot", serif;
 }
+
+.js_body.is-active {
+  overflow: hidden;
+}
+
 .m_hamburger {
   width: 30px;
   height: 22px;
   position: relative;
   z-index: var(--z-index-menu);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .m_hamburger.is-active {
@@ -289,7 +297,7 @@ body {
 .js_navigation {
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
