@@ -2878,7 +2878,7 @@ body {
 }
 @media screen and (min-width: 1080px) {
   .company_table_container {
-    width: 41%;
+    width: 55%;
   }
 }
 
@@ -2921,8 +2921,7 @@ body {
     text-align: center;
     padding-top: 23px;
     padding-bottom: 18px;
-    /* padding-left: 50px;
-    padding-right: 50px; */
+    width: 25%;
     font-size: 15px;
     letter-spacing: 0;
   }
@@ -3051,7 +3050,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .company_map_inner {
-    width: 614px;
+    width: 514px;
     margin: 0 130px;
     text-align: center;
   }
