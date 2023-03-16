@@ -1640,7 +1640,8 @@ body {
 .construction-detail-table {
   margin-top: 36px;
   padding-left: 18.6px;
-  font-size: 8px;
+  font-size: 10px;
+transform: scale(0.8);
   width: 100%;
   border-collapse: collapse;
 }
@@ -1665,7 +1666,8 @@ body {
 
 .construction-detail-consept-txt {
   margin-top: 12px;
-  font-size: 7px;
+  font-size: 10px;
+transform: scale(0.7);
 }
 
 .construction-detail-point-tit {
@@ -1675,7 +1677,8 @@ body {
 
 .construction-detail-point-txt {
   margin-top: 12px;
-  font-size: 7px;
+  font-size: 10px;
+transform: scale(0.7);
 }
 
 .construction-detail_img_wrap:not(:first-child) {
@@ -1757,7 +1760,8 @@ body {
 
   .construction-detail-consept-txt {
     margin-top: 24px;
-    font-size: 7px;
+    font-size: 10px;
+transform: scale(0.7);
   }
 
   .construction-detail-point-tit {
@@ -1767,13 +1771,15 @@ body {
 
   .construction-detail-point-txt {
     margin-top: 24px;
-    font-size: 7px;
+    font-size: 10px;
+transform: scale(0.7);
   }
 
   .construction-detail-table {
     margin-top: 123px;
     padding-left: 18.6px;
-    font-size: 8px;
+    font-size: 10px;
+transform: scale(0.8);
     width: 100%;
     border-collapse: collapse;
   }
@@ -2494,7 +2500,8 @@ body {
 }
 
 .m_event_post_article_place {
-  font-size: 8px;
+  font-size: 10px;
+transform: scale(0.8);
   display: flex;
   align-items: center;
 }
@@ -2522,7 +2529,8 @@ body {
 }
 
 .m_event_post_article_date {
-  font-size: 6px;
+  font-size: 10px;
+transform: scale(0.6);
   letter-spacing: 0.02em;
   margin-top: 9px;
 }
@@ -2535,7 +2543,8 @@ body {
   }
 }
 .m_event_post_article_text {
-  font-size: 9px;
+  font-size: 10px;
+transform: scale(0.9);
   line-height: 2.11;
   margin-top: 15px;
 }
@@ -2721,7 +2730,8 @@ body {
   }
 }
 .m_event_post_article_place {
-  font-size: 8px;
+  font-size: 10px;
+transform: scale(0.8);
   display: flex;
   align-items: center;
 }
@@ -2767,7 +2777,8 @@ body {
 }
 
 .m_event_post_article_date {
-  font-size: 6px;
+  font-size: 10px;
+transform: scale(0.6);
   letter-spacing: 0.02em;
   margin-top: 9px;
 }
@@ -2789,7 +2800,8 @@ body {
 }
 
 .m_event_post_article_text {
-  font-size: 9px;
+  font-size: 10px;
+transform: scale(0.9);
   line-height: 2.11;
   margin-top: 15px;
 }
@@ -3711,7 +3723,8 @@ body {
   cursor: pointer;
 }
 .contact_form_detail__content {
-  font-size: 9px;
+  font-size: 10px;
+transform: scale(0.9);
   line-height: 1.55;
   letter-spacing: 0em;
   margin-left: 24px;
