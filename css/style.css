@@ -2736,7 +2736,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .company_table_tr {
-    border-top: none;
+    border-top: 1px solid linear-gradient(to right, #707070 15%, #cbcbcb 100%);
+
   }
 }
 
