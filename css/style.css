@@ -2130,24 +2130,23 @@ body {
   position: relative;
 }
 
-
 @media screen and (min-width: 1080px) {
   .m_works_post {
     width: 50%;
     height: 9%;
     border: solid 2px var(--white-color);
   }
-  
-    .m_works_post-img-box {
-      width: 100%;
-    }
-  
-    .m_works_post-img {
-      width: 100%;
-      height: 9%;
-      object-fit: cover;
-    }
+
+  .m_works_post-img-box {
+    width: 100%;
   }
+
+  .m_works_post-img {
+    width: 100%;
+    height: 9%;
+    object-fit: cover;
+  }
+}
 
 @media screen and (min-width: 1080px) {
   .m_works_post::before {
@@ -2350,6 +2349,7 @@ body {
 .m_works_guidance_wraper {
   background-color: var(--white-color);
   padding: 2.604vw 1.615vw;
+  height: 100%;
 }
 
 .m_works_guidance_wraper_title {
@@ -2401,7 +2401,7 @@ body {
   .m_event_main_kv {
     display: flex;
     height: 100vh;
-    background: url("../img/event/event_kv.jpg") top center / cover;
+    background: url("../img/event/event.kv.jpg") top center / cover;
     position: relative;
   }
 
@@ -2427,6 +2427,7 @@ body {
     margin: 0 auto;
     margin-top: 139px;
     margin-bottom: 50px;
+    text-align: center;
   }
 }
 
@@ -2448,10 +2449,11 @@ body {
   width: 351px;
   border: 1px solid var(--gray-color4);
   margin-top: 24px;
+  padding-bottom: 16px;
 }
 @media screen and (min-width: 1080px) {
   .m_event_post_contain {
-    width: 1212px;
+    width: 62.4%;
     height: 418px;
   }
   .m_event_post_contain:not(:first-child) {
@@ -2472,7 +2474,6 @@ body {
   margin: 0 auto;
   width: 313px;
   height: 185px;
-  background: url("../img/event/event_1.jpg") top center / cover;
 }
 
 @media screen and (min-width: 1080px) {
@@ -2480,6 +2481,12 @@ body {
     width: 599px;
     height: 352px;
   }
+}
+.m_event_img-img {
+  width: 100%;
+  height: 100%;
+  object-position: bottom center;
+  object-fit: cover;
 }
 .m_event_post_article {
   margin-left: 19px;
@@ -2567,11 +2574,11 @@ body {
 }
 
 /* ------------------------------------------event sub-a----------------------------- */
-@media screen and (min-width: 1080px) {
-  .m_event_contain {
-    margin-bottom: 143px;
-  }
+
+.m_event_contain {
+  margin-bottom: 143px;
 }
+
 .m_event_wraper {
   display: block;
   margin-top: 72px;
@@ -2579,7 +2586,7 @@ body {
   height: 75px;
   width: 148px;
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .m_event_wraper {
     margin: 0 auto;
     margin-top: 139px;
@@ -2659,7 +2666,7 @@ body {
 }
 @media screen and (min-width: 1080px) {
   .m_event_post_contain {
-    width: 1212px;
+    width: 85.4%;
     height: 418px;
   }
   .m_event_post_contain:not(:first-child) {
