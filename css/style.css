@@ -99,7 +99,7 @@ body {
 @media screen and (min-width: 768px) {
   .l_header-nav_list {
     display: flex;
-    gap: 0 40px;
+    gap: 0 20px;
     position: static;
     transform: none;
     align-items: center;
@@ -212,10 +212,9 @@ body {
 
 @media screen and (min-width: 768px) {
   .l_header-nav_item_contact {
-    width: 282px;
     background-color: var(--white-color);
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 40px;
     position: relative;
     opacity: 1;
     z-index: 2;
@@ -233,15 +232,20 @@ body {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px)  {
   .l_header-nav_item:not(:first-child) {
     margin-top: 0;
   }
 }
 
 .l_header-nav_link{
-  font-size: 25px;
+  font-size: 16px;
   font-family: "GFS Didot", serif;
+}
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .l_header-nav_link {
+    font-size: 10px;
+  }
 }
 
 .js_body.is-active {
@@ -810,8 +814,8 @@ body {
 }
 .top_flow-container__pc-img__wrap {
   margin: 154px auto 0;
-  width: 1198px;
-  height: 384px;
+  width: 62%;
+  /* height: 384px; */
 }
 
 /* トップページーイベント */
@@ -2285,7 +2289,7 @@ transform: scale(0.8);
 }
 @media screen and (min-width: 768px) {
   .m_works_guidance_inner {
-    width: 655px;
+    width: 62%;
     display: flex;
     position: relative;
     margin-top: 300px;
@@ -2303,7 +2307,7 @@ transform: scale(0.8);
 }
 @media screen and (min-width: 1080px) {
   .m_works_guidance_inner {
-    width: 1201px;
+    width: 100%;
   }
 }
 
