@@ -4314,7 +4314,7 @@ body {
   bottom: 0;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .spsize_three_box_contain_inner {
     display: none;
   }
@@ -4361,7 +4361,7 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .l_footer {
     display: block;
     text-align: center;
@@ -4443,7 +4443,6 @@ body {
 
   .l_footer-list:not(:first-child) {
     border-left: 1px solid var(--footer-color);
-    /* position: relative; */
     width: 100%;
   }
 
