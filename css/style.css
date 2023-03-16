@@ -1057,6 +1057,7 @@ body {
   text-align: center;
   padding-top: 48px;
   padding-bottom: 55px;
+  width: 38%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1079,7 +1080,7 @@ body {
 }
 
 .sauna-plan_img__pc {
-  width: 736px;
+  width: 100%;
   object-fit: cover;
   object-position: 56%;
   display: none;
