@@ -28,6 +28,8 @@ body {
   color: var(--black-color2);
 }
 /* ---------- layout ---------- */
+/* header */
+
 .l_header {
   height: 70px;
   width: 100%;
@@ -40,19 +42,18 @@ body {
   left: 0;
   z-index: var(--z-index-default);
   background-color: var(--white-color);
-  opacity: 0.63;
+  opacity: 1.0;
 }
 
 @media screen and (min-width: 768px) {
   .l_header {
     padding: 0 48px;
+    opacity: 0.63;
   }
 }
 
 .l_header-logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--black-color);
+  width: 10%;
 }
 
 .l_header-nav {
@@ -78,10 +79,11 @@ body {
 }
 
 .l_header-nav_list {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,14 +96,126 @@ body {
 }
 
 .l_header-nav_item {
-  text-align: center;
   font-size: 14px;
-  font-weight: bold;
+  margin-left: 16%;
+  position: relative;
 }
 
-.l_header-nav_item_contact {
-  background-color: #fff;
-  opacity: 1;
+.l_header-nav_item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+}
+
+.l_header-nav_item::after {
+  content: attr(data-title); /* data-title属性の値を表示 */
+  position: absolute;
+  margin-left: 0;
+  left: 0;
+  bottom: -10px;
+  font-size: 12px;
+}
+
+.l_header-nav_item:nth-child(1)::before {
+  width: 5%;
+  background-color: black;
+}
+
+.l_header-nav_item:nth-child(1)::after {
+  color: black;
+  content: "the HOUSEの思い"; /* テキストを直接指定 */
+}
+
+.l_header-nav_item:nth-child(2)::before {
+  width: 5%;
+  background-color: black;
+}
+
+.l_header-nav_item:nth-child(2)::after {
+  color: black;
+  content: "施工実績"; /* テキストを直接指定 */
+}
+
+.l_header-nav_item:nth-child(3)::before {
+  width: 5%;
+  background-color: black;
+}
+
+.l_header-nav_item:nth-child(3)::after {
+  color: black;
+  content: "ご契約までの流れ"; /* テキストを直接指定 */
+}
+
+.l_header-nav_item:nth-child(4)::before {
+  width: 5%;
+  background-color: black;
+}
+
+.l_header-nav_item:nth-child(4)::after {
+  color: black;
+  content: "お知らせ"; /* テキストを直接指定 */
+}
+
+.l_header-nav_item:nth-child(5)::before {
+  width: 5%;
+  background-color: black;
+}
+
+.l_header-nav_item:nth-child(5)::after {
+  color: black;
+  content: "会社情報"; /* テキストを直接指定 */
+}
+
+.l_header-nav_item:nth-child(6)::before {
+  width: 5%;
+  background-color: black;
+}
+
+.l_header-nav_item:nth-child(6)::after {
+  color: black;
+  content: "プライバシーポリシー"; /* テキストを直接指定 */
+}
+
+@media (min-width: 768px) {
+  .l_header-nav_item::before {
+    display: none;
+  }
+
+  .l_header-nav_item::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .l_header-nav_item_image {
+    display: none;
+  }
+
+  .l_header-nav.is-open .l_header-nav_item_image {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: var(--z-index-header);
+  }
+
+  .l_header-nav.is-open .l_header-nav_item_image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .l_header-nav_item_contact {
+    background-color: white;
+    z-index: 2;
+    padding: 0px 64px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -112,7 +226,7 @@ body {
 }
 
 .l_header-nav_item:not(:first-child) {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -120,6 +234,90 @@ body {
     margin-top: 0;
   }
 }
+
+.l_header-nav_link{
+  font-size: 28px;
+  font-family: "GFS Didot", serif;
+}
+
+.m_hamburger {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  z-index: var(--z-index-menu);
+}
+
+.m_hamburger.is-active {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .m_hamburger {
+    display: none;
+  }
+}
+
+.m_hamburger-bar {
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  background: var(--black-color);
+  left: 50%;
+  transition: 0.3s;
+}
+
+.m_hamburger-bar:first-child {
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.m_hamburger-bar:nth-child(2) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.m_hamburger-bar:last-child {
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.js_navigation {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .js_navigation {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.js_navigation.is-active {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.js_hamburger.is-active .m_hamburger-bar:first-child {
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+.js_hamburger.is-active .m_hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.js_hamburger.is-active .m_hamburger-bar:last-child {
+  top: 50%;
+  transform: translate(-50%, 0) rotate(-45deg);
+}
+
 /* ---------- utility ---------- */
 @media screen and (min-width: 768px) {
   .u_dp-n {
@@ -3624,6 +3822,7 @@ body {
   top: 50%;
   transform: translate(-50%, 0) rotate(-45deg);
 }
+
 
 /* -----------------------------------------------footer-----az------------------------ */
 
