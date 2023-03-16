@@ -1619,7 +1619,7 @@ body {
 }
 
 /* construction-detail */
-.construction-detail_top_kv-img-wrap {
+.construction-detail_kv-img-wrap {
   height: 100vh;
   background: url("../img/works/works_1.jpg") top center / cover;
 }
