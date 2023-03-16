@@ -1818,12 +1818,12 @@ body {
 
 @media screen and (min-width: 1080px) {
   .m_concept_post_box {
-    width: 50%;
+    width: 58%;
     background: rgba(0, 0, 0, 0.65);
     padding: 78px 0 78px 140px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-14%,-50%);
   }
 }
 
@@ -1833,14 +1833,27 @@ body {
   line-height: 1.36;
 }
 
+.m_concept_post_title_2 {
+  font-size: 19px;
+  color: var(--white-color);
+  line-height: 1.36;
+}
+
 @media screen and (min-width: 768px) {
   .m_concept_post_title {
+    font-size: 35px;
+  }
+  .m_concept_post_title_2 {
     font-size: 35px;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .m_concept_post_title {
+    font-size: 50px;
+    line-height: 1.38;
+  }
+  .m_concept_post_title_2 {
     font-size: 50px;
     line-height: 1.38;
   }
@@ -1861,14 +1874,30 @@ body {
   letter-spacing: 0.02em;
 }
 
+.m_concept_post_text_2 {
+  margin-top: 38px;
+  font-size: 12px;
+  color: var(--white-color);
+  line-height: 1.91;
+  letter-spacing: 0.02em;
+}
+
 @media screen and (min-width: 768px) {
   .m_concept_post_text {
+    font-size: 20px;
+  }
+  .m_concept_post_text_2 {
     font-size: 20px;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .m_concept_post_text {
+    font-size: 18px;
+    line-height: 2.09;
+  }
+
+  .m_concept_post_text_2 {
     font-size: 18px;
     line-height: 2.09;
   }
@@ -1898,8 +1927,13 @@ body {
 
 @media screen and (min-width: 1080px) {
   .m_concept_post_box_2 {
-    margin-right: 500px;
-    margin-left: 0%;
+    width: 58%;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 78px 0 78px 140px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
   }
 }
 
