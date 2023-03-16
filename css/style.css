@@ -1661,6 +1661,10 @@ body {
   display: none;
 }
 
+.construction-detail_img-detail_wrap{
+  margin: 0% 10% 10% 8%;
+}
+
 @media screen and (min-width: 1080px) {
   .construction-detail {
     display: flex;
@@ -1670,7 +1674,7 @@ body {
   .construction-detail_img-container {
     display: flex;
     justify-content: space-around;
-    margin: 0px 361px;
+    margin: 0% 19%;
   }
 
   .construction-detail_img_wrap:not(:first-child) {
