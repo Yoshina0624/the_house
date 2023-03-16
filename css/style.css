@@ -3235,9 +3235,56 @@ body {
     }
   }
 
-  .flow_contents_free-inner,
+.flow_contents_free-inner,
   .flow_contents_paid-inner {
     margin-left: 35px;
+  }
+
+  .flow_contents_free-inner{
+    position: relative;
+    padding-left: 14px;
+  }
+
+  .flow_contents_free-inner::before {
+    content: "ここまで無料";
+    position: absolute;
+    left: -80px;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #E2E2E2;
+    padding:19px 10px;
+    text-indent: -6px;
+    writing-mode: vertical-rl;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+   .flow_contents_paid-inner{
+    position: relative;
+    padding-left: 14px;
+  }
+
+    .flow_contents_paid-inner::before {
+    content: "ここから有料";
+    position: absolute;
+    left: -80px;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    background-color: #000;
+    padding:19px 10px;
+    text-indent: -6px;
+    writing-mode: vertical-rl;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
   }
 
   .flow_contents_free-txt {
